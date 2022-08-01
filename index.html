@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://kit.fontawesome.com/c35ea61e69.js" crossorigin="anonymous"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<script src="https://kit.fontawesome.com/c35ea61e69.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="styles.css">
+   <title>Document</title>
+</head>
+
+<body>
+
+     
+   
+   
+      <section id="contentWrap">
+
+         <section id="sidebar">
+
+            
+
+            <form>
+               <div class="labelInputWrap">
+                  <label for="color">Color:</label>
+                  <input type="color" id="color">
+               </div>
+         
+               <div class="labelInputWrap">
+                  <label for="gridInput">GridSize:</label>
+                  <!-- <input type="range" id="gridInput" min="2" max="124"> -->
+                  <select name="" id="gridInput">
+                     <option value="">None</option>
+                     <option value="4">4x4</option>
+                     <option value="16">16x16</option>
+                     <option value="24">24x24</option>
+                     <option value="32">32x32</option>
+                     <option value="64">64x64</option>
+                     <option value="124">124x124</option>
+                  </select>
+                     
+                  
+                  <!-- <i id="gridOptionsArrow" class="fa-solid fa-chevron-down"></i> -->
+               </div>
+               
+               <div class="labelInputWrap">
+                  <h2>Tools</h2>
+                  <div class="toolsContainer">
+                     <div id="brush" class="toolItem toolItem-active">
+                        <i class="fa-solid fa-paint-roller fa-fw"></i>
+                     </div>
+                     <div id="eraser" class="toolItem">
+                        <i class="fa-solid fa-eraser fa-fw"></i>
+                     </div>
+                  
+                  </div>
+               </div>
+
+               <div class="labelInputWrap">
+                  <label for="pixelRange">Pixel Size</label>
+                  <!-- set the ranges in js so max can only be as big as the grid 
+                  ie: if grid is 16x16 dont let brush go past  -->
+                  <input type="range" min="1" max="64" id="pixelRange">
+                  <p id="pixelParagraph"><span id="pixelTextEl">0</span>px</p>
+               </div>
+            </form>
+            
+            
+         </section>
+         
+         
+         
+         <section id="canvasWrap">
+
+            <div class="canvasAlertModal hidden">
+               <h1>Select a Grid Size</h1>
+            </div>
+
+            <div class="previewClick hidden"></div>
+
+            <canvas height="800" width="800"></canvas>
+
+            <button id="canvasReset">Clear Canvas</button>
+
+         </section>
+      </section>
+
+         
+
+
+   
+
+
+   
+   <!-- <div class="coordinates">
+            <h1>X:<span id="x">0</span></h1>
+            <h1>Y:<span id="y">0</span></h1>
+
+         </div> -->
+   
+   
+   
+   
+   <script src="script.js"></script>
+</body>
+</html>
