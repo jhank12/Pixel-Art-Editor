@@ -222,7 +222,8 @@ canvas.addEventListener('click', getCoords);
 function clearCanvas() {
    // set grid lines back
    ctx.clearRect(0,0, canvas.width, canvas.height);
-   setGrid();
+   // setGrid();
+   // generateGridLines();
 }
 
 
@@ -276,8 +277,14 @@ function setGrid(e) {
    cellSize = (canvasWidth / gridSize);
    // console.log(cellSize);
    
-
+   generateGridLines();   
    
+}
+
+
+
+
+function generateGridLines(){
    let offset = cellSize;
 
    for (let i = 1; i <= gridSize; i++) {
