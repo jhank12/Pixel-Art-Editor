@@ -222,6 +222,9 @@ canvas.addEventListener('click', getCoords);
 function clearCanvas() {
    // set grid lines back
    ctx.clearRect(0,0, canvas.width, canvas.height);
+
+
+   
    // setGrid();
    // generateGridLines();
 }
@@ -267,7 +270,7 @@ function getToolInput(e) {
 function setGrid(e) {
    
    // ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-   clearCanvas();
+   clearCanvas()
    gridSize = e.target.value;
 
    gridSizeSet = true;
@@ -276,15 +279,6 @@ function setGrid(e) {
 
    cellSize = (canvasWidth / gridSize);
    // console.log(cellSize);
-   
-   generateGridLines();   
-   
-}
-
-
-
-
-function generateGridLines(){
    let offset = cellSize;
 
    for (let i = 1; i <= gridSize; i++) {
@@ -301,7 +295,13 @@ function generateGridLines(){
       
       offset = cellSize * i;
    }
+   
 }
+
+
+
+
+
 
    
      
