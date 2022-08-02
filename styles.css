@@ -92,6 +92,14 @@ canvas {
    width: 600px; */
 }
 
+#backgroundCanvas {
+   background-color: coral;
+}
+
+#contentCanvas {
+   background-color: olive;
+}
+
 .previewClick {
    border: 2px solid black;
    height: 50px;
