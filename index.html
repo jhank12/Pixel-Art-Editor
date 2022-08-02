@@ -6,10 +6,10 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <script src="https://kit.fontawesome.com/c35ea61e69.js" crossorigin="anonymous"></script>
    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<script src="https://kit.fontawesome.com/c35ea61e69.js" crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <script src="https://kit.fontawesome.com/c35ea61e69.js" crossorigin="anonymous"></script>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="styles.css">
    <title>Document</title>
 </head>
@@ -35,7 +35,6 @@
          
                <div class="labelInputWrap">
                   <label for="gridInput">Grid Size:</label>
-                  <!-- <input type="range" id="gridInput" min="2" max="124"> -->
                   <select name="" id="gridInput">
                      <option value="">None</option>
                      <option value="4">4x4</option>
@@ -47,7 +46,6 @@
                   </select>
                      
                   
-                  <!-- <i id="gridOptionsArrow" class="fa-solid fa-chevron-down"></i> -->
                </div>
                
                <div class="labelInputWrap">
@@ -63,30 +61,11 @@
                   </div>
                </div>
 
-               <!-- <div class="labelInputWrap">
-                  <label for="pixelRange">Pixel Size</label> -->
-                  <!-- set the ranges in js so max can only be as big as the grid 
-                  ie: if grid is 16x16 dont let brush go past  -->
-                  <!-- <input type="range" min="1" max="64" id="pixelRange">
-                  <p id="pixelParagraph"><span id="pixelTextEl">0</span>px</p>
-               </div> -->
-
-               <!-- <div class="labelInputWrap">
-                  <label for="gridColor">Grid Line Color:</label>
-                  <input type="color" id="gridColor">
-               </div>
-
-               <div class="labelInputWrap">
-                  <label for="gridColor">Canvas Color:</label>
-                  <input type="color" id="canvasColor">
-               </div> -->
+              
 
             </form>
 
-            <!-- maybe make another section on far right that has grid settings ie (grid color, canvas color) 
-            and clear canvas button -->
-
-            <!-- add color option for grid lines and canvas bg -->
+            
             
             
          </section>
@@ -99,9 +78,7 @@
             <div class="canvasWrap">
                <canvas id="backgroundCanvas" height="800" width="800"></canvas>
                <canvas id="contentCanvas" height="800" width="800"></canvas>  
-               <!-- <div class="canvasAlertModal">
-                  <h1>Select a Grid Size</h1>
-               </div> -->
+               
             </div>
             <button id="canvasReset">Clear Canvas</button>
             
@@ -118,16 +95,7 @@
 
 
    
-   <!-- <div class="coordinates">
-            <h1>X:<span id="x">0</span></h1>
-            <h1>Y:<span id="y">0</span></h1>
-
-         </div> -->
    
-   
-   
-   
-   <!-- <script src="script.js"></script> -->
    <script src="script.js"></script>
 
 </body>
