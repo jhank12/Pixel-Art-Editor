@@ -363,9 +363,9 @@ function getCoords(e) {
    drawOnCanvas(fillX, fillY);
 
    
+}
    
 
-}
 
 
 function drawOnCanvas(fillX, fillY) {

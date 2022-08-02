@@ -23,6 +23,7 @@ function setGrid(e) {
    // ctx.clearRect(0, 0, canvasWidth, canvasHeight);
    gridSize = 8;
    cellSize = (canvasWidth / gridSize);
+   console.log(cellSize)
 
    
    // gridSize = 8;
