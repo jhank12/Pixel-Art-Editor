@@ -14,17 +14,28 @@ const canvasHeight = contentCanvas.height;
 
 // inputs 
 const gridInput = document.getElementById('gridInput');
+const colorInput = document.getElementById('color');
 const clearCanvasBtn = document.getElementById('canvasReset');
 
 // Event Listeners
 gridInput.addEventListener('input', setGrid);
+colorInput.addEventListener('input', getColor);
+
+
 contentCanvas.addEventListener('click', getCoords);
-clearCanvasBtn.addEventListener('click', clearCanvas)
+
+clearCanvasBtn.addEventListener('click', clearCanvas);
 
 
 
 let cellSize;
 let gridSize;
+let color = '000';
+
+function getColor(e) {
+
+   color = e.target.value;
+}
 
 // setGrid()
 // grid lines only being set on bg canvas
@@ -123,7 +134,8 @@ function drawOnCanvas(fillX, fillY) {
 
    // console.log(selectedTool);
    
-
+   
+   ctxContent.fillStyle = color;
    ctxContent.fillRect(fillX, fillY, cellSize, cellSize);
 
 
