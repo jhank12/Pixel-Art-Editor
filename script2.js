@@ -12,6 +12,8 @@ const ctxContent = contentCanvas.getContext('2d');
 const canvasWidth = contentCanvas.width;
 const canvasHeight = contentCanvas.height;
 
+const canvasModal = document.querySelector('.canvasAlertModal');
+
 // inputs 
 const gridInput = document.getElementById('gridInput');
 const colorInput = document.getElementById('color');
@@ -22,7 +24,6 @@ const canvasColorInput = document.getElementById('canvasColor');
 // Event Listeners
 gridInput.addEventListener('input', setGrid);
 colorInput.addEventListener('input', getColor);
-gridLineColorInput.addEventListener('input', gridColor);
 
 
 
@@ -60,6 +61,8 @@ function setGrid(e) {
    
    // ctxBg.clearRect(0, 0, canvasWidth, canvasHeight);
    clearCanvas();
+
+   // canvasModal.classList.add('hidden');
    ctxBg.clearRect(0, 0, canvasWidth, canvasHeight);
    // gridSize = 16;
    gridSize = e.target.value;
@@ -91,6 +94,7 @@ function setGrid(e) {
    
 }
 
+console.log(contentCanvas.getBoundingClientRect());
 
 function getCoords(e) {
    const { x: outSideX, y: outSideY } = contentCanvas.getBoundingClientRect();
@@ -99,7 +103,11 @@ function getCoords(e) {
    const mouseX = Math.max(Math.round(e.clientX - outSideX), 0);
    const mouseY = Math.max(Math.round(e.clientY - outSideY), 0);
 
-   console.log(mouseX, mouseY)
+   // console.log(mouseX, mouseY)
+
+   // console.log(Math.floor(mouseX / cellSize))
+   // console.log(Math.floor(mouseY / cellSize))
+   console.log(`(${Math.floor(mouseX / cellSize)}, ${Math.floor(mouseY / cellSize)})`)
 
    
    let xCoord;

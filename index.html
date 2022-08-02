@@ -63,15 +63,15 @@
                   </div>
                </div>
 
-               <div class="labelInputWrap">
-                  <label for="pixelRange">Pixel Size</label>
+               <!-- <div class="labelInputWrap">
+                  <label for="pixelRange">Pixel Size</label> -->
                   <!-- set the ranges in js so max can only be as big as the grid 
                   ie: if grid is 16x16 dont let brush go past  -->
-                  <input type="range" min="1" max="64" id="pixelRange">
+                  <!-- <input type="range" min="1" max="64" id="pixelRange">
                   <p id="pixelParagraph"><span id="pixelTextEl">0</span>px</p>
-               </div>
+               </div> -->
 
-               <div class="labelInputWrap">
+               <!-- <div class="labelInputWrap">
                   <label for="gridColor">Grid Line Color:</label>
                   <input type="color" id="gridColor">
                </div>
@@ -79,7 +79,7 @@
                <div class="labelInputWrap">
                   <label for="gridColor">Canvas Color:</label>
                   <input type="color" id="canvasColor">
-               </div>
+               </div> -->
 
             </form>
 
@@ -95,13 +95,13 @@
          
          <section id="canvasContentWrap">
 
-            <!-- <div class="canvasAlertModal hidden">
-               <h1>Select a Grid Size</h1>
-            </div> -->
+            
             <div class="canvasWrap">
                <canvas id="backgroundCanvas" height="800" width="800"></canvas>
                <canvas id="contentCanvas" height="800" width="800"></canvas>  
-               
+               <!-- <div class="canvasAlertModal">
+                  <h1>Select a Grid Size</h1>
+               </div> -->
             </div>
             <button id="canvasReset">Clear Canvas</button>
             
