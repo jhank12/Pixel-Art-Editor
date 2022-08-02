@@ -16,10 +16,14 @@ const canvasHeight = contentCanvas.height;
 const gridInput = document.getElementById('gridInput');
 const colorInput = document.getElementById('color');
 const clearCanvasBtn = document.getElementById('canvasReset');
+const gridLineColorInput = document.getElementById('gridColor');
+const canvasColorInput = document.getElementById('canvasColor');
 
 // Event Listeners
 gridInput.addEventListener('input', setGrid);
 colorInput.addEventListener('input', getColor);
+gridLineColorInput.addEventListener('input', gridColor);
+
 
 
 contentCanvas.addEventListener('click', getCoords);
@@ -31,6 +35,12 @@ clearCanvasBtn.addEventListener('click', clearCanvas);
 let cellSize;
 let gridSize;
 let color = '000';
+
+
+
+
+
+// console.log(gridLinesColor());
 
 function getColor(e) {
 
@@ -46,6 +56,7 @@ function clearCanvas() {
 
 
 function setGrid(e) {
+
    
    // ctxBg.clearRect(0, 0, canvasWidth, canvasHeight);
    clearCanvas();
@@ -72,7 +83,7 @@ function setGrid(e) {
       // y axis
       ctxBg.moveTo(offset, 0);
       ctxBg.lineTo(offset, canvasHeight);
-      ctxBg.strokeStyle = '#424242';
+      ctxBg.strokeStyle = 'rgb(56, 56, 56)';
       ctxBg.stroke();
       
       offset = cellSize * i;
@@ -136,6 +147,7 @@ function drawOnCanvas(fillX, fillY) {
    
    
    ctxContent.fillStyle = color;
+   ctxContent.clearRect(fillX, fillY, cellSize, cellSize);
    ctxContent.fillRect(fillX, fillY, cellSize, cellSize);
 
 
@@ -150,3 +162,7 @@ function drawOnCanvas(fillX, fillY) {
 
 
 }
+
+// to add 
+// maybe pixel size
+// mouse down event to draw
