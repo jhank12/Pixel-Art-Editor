@@ -13,18 +13,20 @@ const canvasWidth = contentCanvas.width;
 const canvasHeight = contentCanvas.height;
 
 // inputs 
-clearCanvas = document.getElementById('canvasReset');
+const gridInput = document.getElementById('gridInput');
+const clearCanvasBtn = document.getElementById('canvasReset');
 
 // Event Listeners
+gridInput.addEventListener('input', setGrid);
 contentCanvas.addEventListener('click', getCoords);
-clearCanvas.addEventListener('click', clearCanvas)
+clearCanvasBtn.addEventListener('click', clearCanvas)
 
 
 
 let cellSize;
 let gridSize;
 
-setGrid()
+// setGrid()
 // grid lines only being set on bg canvas
 
 function clearCanvas() {
@@ -34,8 +36,12 @@ function clearCanvas() {
 
 function setGrid(e) {
    
-   // ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-   gridSize = 8;
+   // ctxBg.clearRect(0, 0, canvasWidth, canvasHeight);
+   clearCanvas();
+   ctxBg.clearRect(0, 0, canvasWidth, canvasHeight);
+   // gridSize = 16;
+   gridSize = e.target.value;
+
    cellSize = (canvasWidth / gridSize);
    console.log(cellSize)
 
