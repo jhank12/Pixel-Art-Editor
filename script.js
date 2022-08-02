@@ -44,10 +44,8 @@ let selectedTool = 'brush';
 
 
 function getColor(e) {
-
    color = e.target.value;
 }
-
 
 
 function clearCanvas() {
@@ -89,23 +87,22 @@ function setGrid(e) {
    
 }
 
-console.log(contentCanvas.getBoundingClientRect());
+
+
 
 function getCoords(e) {
    const { x: outSideX, y: outSideY } = contentCanvas.getBoundingClientRect();
-
-
+   
    const mouseX = Math.max(Math.round(e.clientX - outSideX), 0);
    const mouseY = Math.max(Math.round(e.clientY - outSideY), 0);
-
+   
    const cellX = Math.floor(mouseX / cellSize);
    const cellY = Math.floor(mouseY / cellSize);
-
-   drawOnCanvas(cellX, cellY);
-
-}
    
-  
+   drawOnCanvas(cellX, cellY);
+   
+}
+
 
 function getToolInput(e) {
    const tool = e.target.closest('.toolItem');
@@ -119,6 +116,7 @@ function getToolInput(e) {
    selectedTool = tool.id;
 
 }
+
 
 
 function drawOnCanvas(fillX, fillY) {
@@ -136,25 +134,9 @@ function drawOnCanvas(fillX, fillY) {
       ctxContent.fillRect(fillXPos, fillYPos, cellSize, cellSize);
    } 
    else if (selectedTool === 'eraser') {
-      console.log('erased')
       ctxContent.clearRect(fillXPos, fillYPos, cellSize, cellSize);
-
    }
-
-
- 
-
-   
-
-
-
-
 }
-
-
-
-
-
 
 
 
