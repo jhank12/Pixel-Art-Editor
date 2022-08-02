@@ -20,6 +20,7 @@ const colorInput = document.getElementById('color');
 const clearCanvasBtn = document.getElementById('canvasReset');
 const gridLineColorInput = document.getElementById('gridColor');
 const canvasColorInput = document.getElementById('canvasColor');
+const 
 
 // Event Listeners
 gridInput.addEventListener('input', setGrid);
@@ -36,6 +37,7 @@ clearCanvasBtn.addEventListener('click', clearCanvas);
 let cellSize;
 let gridSize;
 let color = '000';
+let selectedTool = 'brush';
 
 
 
@@ -107,66 +109,55 @@ function getCoords(e) {
 
    // console.log(Math.floor(mouseX / cellSize))
    // console.log(Math.floor(mouseY / cellSize))
-   console.log(`(${Math.floor(mouseX / cellSize)}, ${Math.floor(mouseY / cellSize)})`)
+   // console.log(`(${Math.floor(mouseX / cellSize)}, ${Math.floor(mouseY / cellSize)})`)
+   const cellX = Math.floor(mouseX / cellSize);
+   const cellY = Math.floor(mouseY / cellSize);
+
+   drawOnCanvas(cellX, cellY);
 
    
-   let xCoord;
-   let yCoord;
-   
-   for (let i = 1; i <= gridSize; i++) {
-      
-      let prevI = i - 1;
-      
-      // mouseX coord
-      if (mouseX <= cellSize * i && mouseX >= cellSize * prevI) {
-         xCoord = i;
-         
-         // console.log(xCoord)
-         
-      }
-      
-      if(mouseY <= cellSize * i && mouseY >= cellSize * prevI) {
-         yCoord = i;
-         
-      }
-      
-   }
+  
+
 
    
-   let fillX = (xCoord * cellSize) - cellSize;
-   let fillY = (yCoord * cellSize) - cellSize;
-   // console.log(fillX, fillY);
-   // console.log(xCoord, yCoord);
-   // console.log(mouseX, mouseY)
+}
 
-   drawOnCanvas(fillX, fillY);
+function getToolInput(e) {
+   const tool = e.target.closest('.toolItem');
+   if(!tool) return
 
+   toolItems.forEach(tool => {
+      tool.classList.remove('toolItem-active');
+   })
    
+   tool.classList.add('toolItem-active');
+   selectedTool = tool.id;
+
+ 
+
 }
    
 
 
 
 function drawOnCanvas(fillX, fillY) {
-   // check what tool is selected 
-   // if eraser set brush to bg color
-
-   // console.log(selectedTool);
-   
    
    ctxContent.fillStyle = color;
-   ctxContent.clearRect(fillX, fillY, cellSize, cellSize);
-   ctxContent.fillRect(fillX, fillY, cellSize, cellSize);
+
+   ctxContent.fillRect(fillX * cellSize, fillY * cellSize, cellSize, cellSize);
+   
+   
+  
 
 
-   // if(selectedTool === 'brush') {
+   if(selectedTool === 'brush') {
       
-   //    ctx.fillStyle = color;
-   //    ctx.fillRect(fillX, fillY, cellSize * pixelSize, cellSize * pixelSize);
-   // } 
-   // else {
-   //    ctx.clearRect(fillX, fillY, cellSize, cellSize);
-   // }
+      ctx.fillStyle = color;
+      ctx.fillRect(fillX, fillY, cellSize * pixelSize, cellSize * pixelSize);
+   } 
+   else {
+      ctx.clearRect(fillX, fillY, cellSize, cellSize);
+   }
 
 
 }
