@@ -86,7 +86,7 @@ canvas {
    background-color: #dadada;
    cursor: pointer;
    /* border: 2px solid #000; */
-   
+   position: absolute;
    /* margin-right: 1000px; */
    /* height: 600px;
    width: 600px; */
@@ -97,7 +97,8 @@ canvas {
 }
 
 #contentCanvas {
-   background-color: olive;
+   /* background-color: olive; */
+   background-color: transparent;
 }
 
 .previewClick {
