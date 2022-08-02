@@ -14,17 +14,23 @@ const canvasHeight = contentCanvas.height;
 
 const canvasModal = document.querySelector('.canvasAlertModal');
 
+const toolItems = document.querySelectorAll('.toolItem');
+
+
+
 // inputs 
 const gridInput = document.getElementById('gridInput');
 const colorInput = document.getElementById('color');
 const clearCanvasBtn = document.getElementById('canvasReset');
 const gridLineColorInput = document.getElementById('gridColor');
 const canvasColorInput = document.getElementById('canvasColor');
-const 
+const toolsContainer = document.querySelector('.toolsContainer');
 
 // Event Listeners
 gridInput.addEventListener('input', setGrid);
 colorInput.addEventListener('input', getColor);
+toolsContainer.addEventListener('click', getToolInput);
+
 
 
 
@@ -144,23 +150,29 @@ function drawOnCanvas(fillX, fillY) {
    
    ctxContent.fillStyle = color;
 
-   ctxContent.fillRect(fillX * cellSize, fillY * cellSize, cellSize, cellSize);
-   
-   
-  
+   // ctxContent.fillRect(fillX * cellSize, fillY * cellSize, cellSize, cellSize);
 
+   const fillXPos = fillX * cellSize;
+   const fillYPos = fillY * cellSize;
 
+   
    if(selectedTool === 'brush') {
       
-      ctx.fillStyle = color;
-      ctx.fillRect(fillX, fillY, cellSize * pixelSize, cellSize * pixelSize);
+      ctxContent.fillStyle = color;
+      ctxContent.fillRect(fillXPos, fillYPos, cellSize, cellSize);
    } 
-   else {
-      ctx.clearRect(fillX, fillY, cellSize, cellSize);
+   else if (selectedTool === 'eraser') {
+      console.log('erased')
+      ctxContent.clearRect(fillXPos, fillYPos, cellSize, cellSize);
+
    }
 
 
 }
+   
+  
+
+
 
 // to add 
 // maybe pixel size
