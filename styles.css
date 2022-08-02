@@ -59,13 +59,13 @@ button:hover {
    gap: 35px;
 }
 
-#canvasWrap {
+#canvasContentWrap {
    grid-area: canvas;
    background-color: #1f1f1f;
-   display: flex;
+   /* display: flex;
    align-items: center;
    justify-content: center;
-   flex-direction: column;
+   flex-direction: column; */
    position: relative;
    gap: 55px;
 }
@@ -82,11 +82,28 @@ button:hover {
    position: absolute;
 }
 
+.canvasWrap {
+    /* align-items: center; 
+    justify-content: center; 
+    display: flex; 
+    position: relative; 
+   width: 800px;
+   height: 800px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%); */
+
+}
+
 canvas {
    background-color: #dadada;
    cursor: pointer;
    /* border: 2px solid #000; */
    position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%); 
    /* margin-right: 1000px; */
    /* height: 600px;
    width: 600px; */
@@ -97,8 +114,8 @@ canvas {
 }
 
 #contentCanvas {
-   /* background-color: olive; */
-   background-color: transparent;
+   background-color: olive;
+   /* background-color: transparent; */
 }
 
 .previewClick {
