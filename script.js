@@ -28,8 +28,8 @@ if (innerWidth < 1200) {
 }
 
 
-let canvasWidth = contentCanvas.width;
-let canvasHeight = contentCanvas.height;
+const canvasWidth = contentCanvas.width;
+const canvasHeight = contentCanvas.height;
 
 canvasContainer.style.width = `${canvasWidth}px`;
 canvasContainer.style.height = `${canvasHeight}px`;
