@@ -6,6 +6,7 @@
 
 body {
    align-items: center;
+   /* background-color: #1f1f1f; */
    display: flex;
    flex-direction: column;
    font-family: 'Poppins', sans-serif;
@@ -42,10 +43,11 @@ button:hover {
 }
 
 #contentWrap {
+   background-color: #1f1f1f;
    /* display: grid;
    grid-template-columns: 350px 1fr;
    grid-template-areas: 'sidebar canvas'; */
-   background-color: coral;
+   /* background-color: coral; */
    display: flex;
    align-items: center;
    justify-content: center;
@@ -58,7 +60,9 @@ button:hover {
 #sidebar {
    /* grid-area: sidebar; */
    background-color: #272727;
-   padding: 0 25px;
+   border-radius: 15px;
+   box-shadow: 2px 3px 5px 1px rgba(29, 29, 29, 0.8);
+   padding: 30px;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -75,8 +79,7 @@ button:hover {
 
    position: relative;
    gap: 55px;
-   padding-right: 200px;
-   width: 800px;
+   /* width: 800px; */
 }
 
 
@@ -92,7 +95,7 @@ button:hover {
 } */
 
 .canvasWrap {
-    
+   background-color: lightslategray;
    position: relative;
    height: 800px;
    width: 800px;
@@ -122,16 +125,22 @@ canvas {
 
 #contentCanvas {
    background-color: olive;
-   /* background-color: transparent; */
+   background-color: transparent;
 }
 
 
 
-#canvasReset {
+#canvasReset, .toolItem {
    /* position: absolute;
    bottom: 8%;
    left: 50%;
    transform: translate(-50%, -50%);  */
+   /* margin: 0 auto; */
+   transition: all ease-in-out 220ms;
+}
+
+#canvasReset:hover, .toolItem:hover {
+   transform: translateY(-2.5px);
 }
 
 .previewClick {
@@ -153,10 +162,13 @@ canvas {
    background-color: #383838;
    border-radius: 15px;
    cursor: pointer;
+   align-items: center;
+   display: flex;
    /* flex: 1; */
    /* height: 50px;
    width: 50px; */
    padding: 15px;
+   height: 80px;
 }
 
 .toolItem:hover {
@@ -172,7 +184,7 @@ canvas {
 
 .toolItem i {
    color: rgb(241, 241, 241);
-   font-size: 40px;
+   font-size: 42px;
 }
 
 
@@ -181,9 +193,9 @@ form {
    display: flex;
    flex-direction: column;
    /* justify-content: space-between; */
-   gap: 35px;
+   gap: 32px;
    /* width: 310px; */
-   width: 85%;
+   /* width: 85%; */
 }
 
 .labelInputWrap {
@@ -270,7 +282,7 @@ select > * {
 
 label {
    font-size: 1.75rem;
-   font-weight: 600;
+   font-weight: 500;
 }
 
 #pixelRange {

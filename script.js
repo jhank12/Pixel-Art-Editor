@@ -6,14 +6,42 @@
 const backgroundCanvas = document.getElementById('backgroundCanvas');
 const contentCanvas = document.getElementById('contentCanvas');
 
+console.log(backgroundCanvas.width)
+
 // canvas context
 const ctxBg = backgroundCanvas.getContext('2d');
 const ctxContent = contentCanvas.getContext('2d');
 
-// canvas dimensions
-const canvasWidth = contentCanvas.width;
-const canvasHeight = contentCanvas.height;
+const canvasContainer = document.querySelector('.canvasWrap')
+console.log(canvasContainer.style)
 
+const { innerWidth } = window;
+
+
+if (innerWidth < 1200) {
+   backgroundCanvas.width = 600;
+   backgroundCanvas.height = 600;
+
+   contentCanvas.width = 600;
+   contentCanvas.height = 600;
+
+}
+
+
+let canvasWidth = contentCanvas.width;
+let canvasHeight = contentCanvas.height;
+
+canvasContainer.style.width = `${canvasWidth}px`;
+canvasContainer.style.height = `${canvasHeight}px`;
+
+console.log(canvasContainer.style.height)
+
+
+// canvas dimensions
+// let canvasWidth = contentCanvas.width;
+// let canvasHeight = contentCanvas.height;
+
+// console.log(canvasWidth, canvasHeight)
 
 
 
@@ -33,6 +61,7 @@ gridInput.addEventListener('input', setGrid);
 toolsContainer.addEventListener('click', getToolInput);
 contentCanvas.addEventListener('click', getCoords);
 clearCanvasBtn.addEventListener('click', clearCanvas);
+
 
 
 let cellSize;
