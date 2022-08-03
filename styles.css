@@ -40,17 +40,23 @@ button {
 button:hover {
    background-color: #1DB954;
 }
+
 #contentWrap {
-   display: grid;
+   /* display: grid;
    grid-template-columns: 350px 1fr;
-   grid-template-areas: 'sidebar canvas';
+   grid-template-areas: 'sidebar canvas'; */
+   background-color: coral;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 40px;
    height: 100vh;
    width: 100%;
 }
 
 
 #sidebar {
-   grid-area: sidebar;
+   /* grid-area: sidebar; */
    background-color: #272727;
    padding: 0 25px;
    display: flex;
@@ -60,7 +66,7 @@ button:hover {
 }
 
 #canvasContentWrap {
-   grid-area: canvas;
+   /* grid-area: canvas; */
    background-color: #1f1f1f;
    display: flex;
    align-items: center;
@@ -70,6 +76,7 @@ button:hover {
    position: relative;
    gap: 55px;
    padding-right: 200px;
+   width: 800px;
 }
 
 
@@ -85,36 +92,21 @@ button:hover {
 } */
 
 .canvasWrap {
-    /* align-items: center; 
-    justify-content: center; 
-    display: flex; 
-    position: relative; 
-   width: 800px;
-   height: 800px;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%); */
+    
    position: relative;
    height: 800px;
    width: 800px;
 }
 
 .canvasWrap > * {
-   position: absolute;
+   /* position: absolute; */
 }
 
 canvas {
-   /* background-color: #dadada; */
    cursor: pointer;
-   /* border: 2px solid #000; */
-   /* position: absolute;
-   top: 50%;
+   top: 0;
    left: 50%;
-   transform: translate(-50%, -50%);  */
-   /* margin-right: 1000px; */
-   /* height: 600px;
-   width: 600px; */
+   transform: translateX(-50%);
    position: absolute;
    /* position: relative; */
 
@@ -129,8 +121,8 @@ canvas {
 }
 
 #contentCanvas {
-   /* background-color: olive; */
-   background-color: transparent;
+   background-color: olive;
+   /* background-color: transparent; */
 }
 
 
