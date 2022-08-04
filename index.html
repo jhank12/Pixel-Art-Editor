@@ -17,77 +17,83 @@
 <body>
 
      
-   
-   
-      <section id="contentWrap">
+      <header>
+         <h1>Pixel Art Editor</h1>
+      </header>
 
-         <section id="sidebar">
+      <main>
+         <section id="contentWrap">
 
+            <section id="sidebar">
+   
+               
+   
+               <form>
+                  
+   
+                  
             
-
-            <form>
-               
-
-               
-         
-               <div class="labelInputWrap">
-                  <label for="gridInput">Grid Size:</label>
-                  <select name="" id="gridInput">
-                     <option value="">None</option>
-                     <option value="4">4x4</option>
-                     <option value="16">16x16</option>
-                     <option value="24">24x24</option>
-                     <option value="32">32x32</option>
-                     <option value="64">64x64</option>
-                     <option value="124">124x124</option>
-                  </select>
+                  <div class="labelInputWrap">
+                     <label for="gridInput">Grid Size:</label>
+                     <select name="" id="gridInput">
+                        <option value="">None</option>
+                        <option value="4">4x4</option>
+                        <option value="16">16x16</option>
+                        <option value="24">24x24</option>
+                        <option value="32">32x32</option>
+                        <option value="64">64x64</option>
+                        <option value="124">124x124</option>
+                     </select>
+                        
                      
-                  
-               </div>
-               
-               <div class="labelInputWrap">
-                  <h2>Tools</h2>
-                  <div class="toolsContainer">
-                     <div id="brush" class="toolItem toolItem-active">
-                        <i class="fa-solid fa-paintbrush fa-fw"></i>
-                        <!-- <i class="fa-solid fa-paint-roller fa-fw"></i> -->
-                     </div>
-                     <div id="eraser" class="toolItem">
-                        <i class="fa-solid fa-eraser fa-fw"></i>
-                     </div>
-                  
                   </div>
-               </div>
-
-               <div class="labelInputWrap">
-                  <label for="color">Color</label>
-                  <input type="color" id="color">
-               </div>
-
-            </form>
-
-            
-            
-            
-         </section>
-         
-         
-         
-         <section id="canvasContentWrap">
-
-            
-            <div class="canvasWrap">
-               <canvas id="backgroundCanvas" height="800" width="800"></canvas>
-               <canvas id="contentCanvas" height="800" width="800"></canvas>  
+                  
+                  <div class="labelInputWrap">
+                     <h2>Tools:</h2>
+                     <div class="toolsContainer">
+                        <div id="brush" class="toolItem toolItem-active">
+                           <i class="fa-solid fa-paintbrush fa-fw"></i>
+                           <!-- <i class="fa-solid fa-paint-roller fa-fw"></i> -->
+                        </div>
+                        <div id="eraser" class="toolItem">
+                           <i class="fa-solid fa-eraser fa-fw"></i>
+                        </div>
+                     
+                     </div>
+                  </div>
+   
+                  <div class="labelInputWrap">
+                     <label for="color">Color:</label>
+                     <input type="color" id="color">
+                  </div>
+   
+               </form>
+   
                
-            </div>
-            <button id="canvasReset">Clear Canvas</button>
+               
+               
+            </section>
             
             
+            
+            <section id="canvasContentWrap">
+   
+               
+               <div class="canvasWrap">
+                  <canvas id="backgroundCanvas" height="800" width="800"></canvas>
+                  <canvas id="contentCanvas" height="800" width="800"></canvas>  
+                  
+               </div>
+               <button id="canvasReset">Clear Canvas</button>
+               
+               
+            </section>
+   
+   
          </section>
-
-
-      </section>
+      </main>
+   
+      
 
          
 

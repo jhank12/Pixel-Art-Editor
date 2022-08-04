@@ -5,10 +5,12 @@
 }
 
 body {
-   align-items: center;
+   /* align-items: center; */
+   background-color: #1f1f1f;
+
    /* background-color: #1f1f1f; */
-   display: flex;
-   flex-direction: column;
+   /* display: flex;
+   flex-direction: column; */
    font-family: 'Poppins', sans-serif;
    gap: 20px;
    height: 100vh;
@@ -16,8 +18,10 @@ body {
 }
 
 h1 {
-   color:#1DB954;
-   font-size: 3.3rem
+   /* color:#1DB954; */
+   color: rgb(241, 241, 241);
+   font-size: 3rem;
+   font-weight: 600;
 }
 
 h2 {
@@ -42,8 +46,22 @@ button:hover {
    background-color: #1DB954;
 }
 
+header {
+   background-color: #383838;
+   box-shadow: 0 3px 9px 4px rgba(17, 17, 17, 0.678);
+   display: flex;
+   justify-content: center;
+   padding: 35px 0;
+   width: 100%;
+}
+
+main {
+   background-color: rgb(252, 105, 105);
+   position: relative;
+}
+
 #contentWrap {
-   background-color: #1f1f1f;
+   background-color: coral;
    /* display: grid;
    grid-template-columns: 350px 1fr;
    grid-template-areas: 'sidebar canvas'; */
@@ -52,8 +70,10 @@ button:hover {
    align-items: center;
    justify-content: center;
    gap: 40px;
-   height: 100vh;
-   width: 100%;
+   position: absolute;
+   top: 5%;
+   /* height: 100vh; */
+   /* width: 100%; */
 }
 
 
@@ -62,23 +82,29 @@ button:hover {
    background-color: #272727;
    border-radius: 15px;
    box-shadow: 2px 3px 5px 1px rgba(29, 29, 29, 0.8);
-   padding: 30px;
+   padding: 25px;
    display: flex;
    flex-direction: column;
    justify-content: center;
    gap: 35px;
+   width: 240px;
+   /* top: 50%;
+   left: 20%;
+   position: absolute; */
 }
 
 #canvasContentWrap {
    /* grid-area: canvas; */
-   background-color: #1f1f1f;
+   background-color: lightblue;
    display: flex;
    align-items: center;
    justify-content: center;
    flex-direction: column;
-
-   position: relative;
+   /* position: absolute; */
    gap: 55px;
+   /* top: 5%;
+   left: 50%;
+   transform: translateX(-50%); */
    /* width: 800px; */
 }
 
@@ -168,7 +194,7 @@ canvas {
    /* height: 50px;
    width: 50px; */
    padding: 15px;
-   height: 80px;
+   /* height: 80px; */
 }
 
 .toolItem:hover {
@@ -184,7 +210,7 @@ canvas {
 
 .toolItem i {
    color: rgb(241, 241, 241);
-   font-size: 42px;
+   font-size: 35px;
 }
 
 
