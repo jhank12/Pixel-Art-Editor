@@ -5,18 +5,24 @@
 }
 
 body {
-   align-items: center;
+   /* align-items: center; */
    /* background-color: #1f1f1f; */
-   display: flex;
-   flex-direction: column;
+   /* display: flex;
+   flex-direction: column; */
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 150px 1fr;
+   grid-template-areas: 'header'
+                        'content';
+   
    font-family: 'Poppins', sans-serif;
-   gap: 20px;
    height: 100vh;
-   justify-content: center;
+   
+   /* justify-content: center; */
 }
 
 h1 {
-   color:#1DB954;
+   color:#dadada;
    font-size: 3.3rem
 }
 
@@ -42,8 +48,19 @@ button:hover {
    background-color: #1DB954;
 }
 
+header {
+   /* height: 150px; */
+   background-color: #272727;
+   box-shadow: 0 4px 12px 3px rgba(29, 29, 29, 0.8);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   grid-area: header;
+}
+
 #contentWrap {
    background-color: #1f1f1f;
+   grid-area: content;
    /* display: grid;
    grid-template-columns: 350px 1fr;
    grid-template-areas: 'sidebar canvas'; */
@@ -52,7 +69,7 @@ button:hover {
    align-items: center;
    justify-content: center;
    gap: 40px;
-   height: 100vh;
+   /* height: 100vh; */
    width: 100%;
 }
 
@@ -97,8 +114,8 @@ button:hover {
 .canvasWrap {
    background-color: lightslategray;
    position: relative;
-   height: 800px;
-   width: 800px;
+   height: 700px;
+   width: 700px;
 }
 
 .canvasWrap > * {
@@ -168,7 +185,7 @@ canvas {
    /* height: 50px;
    width: 50px; */
    padding: 15px;
-   height: 80px;
+   /* height: 80px; */
 }
 
 .toolItem:hover {
@@ -184,7 +201,7 @@ canvas {
 
 .toolItem i {
    color: rgb(241, 241, 241);
-   font-size: 42px;
+   font-size: 38px;
 }
 
 
