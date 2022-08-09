@@ -1,19 +1,13 @@
 
-// get both canvases
-// get all canvas items for both (context, width and height)
-
-// both canvases
 const backgroundCanvas = document.getElementById('backgroundCanvas');
 const contentCanvas = document.getElementById('contentCanvas');
 
-console.log(backgroundCanvas.width)
 
 // canvas context
 const ctxBg = backgroundCanvas.getContext('2d');
 const ctxContent = contentCanvas.getContext('2d');
 
 const canvasContainer = document.querySelector('.canvasWrap')
-console.log(canvasContainer.style)
 
 const { innerWidth } = window;
 
@@ -34,14 +28,9 @@ const canvasHeight = contentCanvas.height;
 canvasContainer.style.width = `${canvasWidth}px`;
 canvasContainer.style.height = `${canvasHeight}px`;
 
-console.log(canvasContainer.style.height)
 
 
-// canvas dimensions
-// let canvasWidth = contentCanvas.width;
-// let canvasHeight = contentCanvas.height;
 
-// console.log(canvasWidth, canvasHeight)
 
 
 
@@ -91,12 +80,10 @@ function setGrid(e) {
    gridSize = e.target.value;
 
    cellSize = (canvasWidth / gridSize);
-   console.log(cellSize)
 
    
 
    cellSize = (canvasWidth / gridSize);
-   // console.log(cellSize);
    let offset = cellSize;
 
    for (let i = 1; i <= gridSize; i++) {

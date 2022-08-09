@@ -5,10 +5,7 @@
 }
 
 body {
-   /* align-items: center; */
-   /* background-color: #1f1f1f; */
-   /* display: flex;
-   flex-direction: column; */
+   
    display: grid;
    grid-template-columns: 1fr;
    grid-template-rows: 150px 1fr;
@@ -18,7 +15,6 @@ body {
    font-family: 'Poppins', sans-serif;
    height: 100vh;
    
-   /* justify-content: center; */
 }
 
 h1 {
@@ -49,7 +45,6 @@ button:hover {
 }
 
 header {
-   /* height: 150px; */
    background-color: #272727;
    box-shadow: 0 4px 12px 3px rgba(29, 29, 29, 0.8);
    display: flex;
@@ -61,21 +56,16 @@ header {
 #contentWrap {
    background-color: #1f1f1f;
    grid-area: content;
-   /* display: grid;
-   grid-template-columns: 350px 1fr;
-   grid-template-areas: 'sidebar canvas'; */
-   /* background-color: coral; */
+   
    display: flex;
    align-items: center;
    justify-content: center;
    gap: 40px;
-   /* height: 100vh; */
    width: 100%;
 }
 
 
 #sidebar {
-   /* grid-area: sidebar; */
    background-color: #272727;
    border-radius: 15px;
    box-shadow: 2px 3px 5px 1px rgba(29, 29, 29, 0.8);
@@ -87,7 +77,6 @@ header {
 }
 
 #canvasContentWrap {
-   /* grid-area: canvas; */
    background-color: #1f1f1f;
    display: flex;
    align-items: center;
@@ -96,20 +85,8 @@ header {
 
    position: relative;
    gap: 55px;
-   /* width: 800px; */
 }
 
-
-/* .canvasAlertModal {
-   background-color: rgba(56, 56, 56, 1);
-   background-color: rgb(56, 56, 56);
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 800px;
-   width: 800px;
-   position: absolute;
-} */
 
 .canvasWrap {
    background-color: lightslategray;
@@ -118,9 +95,6 @@ header {
    width: 700px;
 }
 
-.canvasWrap > * {
-   /* position: absolute; */
-}
 
 canvas {
    cursor: pointer;
@@ -128,17 +102,14 @@ canvas {
    left: 50%;
    transform: translateX(-50%);
    position: absolute;
-   /* position: relative; */
 
 }
 
 #backgroundCanvas {
-   /* background-color: coral; */
    background-color: #dadada;
-   /* position: relative; */
-   /* top: 0; */
+   
+} 
 
-}
 
 #contentCanvas {
    background-color: olive;
@@ -148,11 +119,7 @@ canvas {
 
 
 #canvasReset, .toolItem {
-   /* position: absolute;
-   bottom: 8%;
-   left: 50%;
-   transform: translate(-50%, -50%);  */
-   /* margin: 0 auto; */
+   
    transition: all ease-in-out 220ms;
 }
 
@@ -171,7 +138,6 @@ canvas {
 
 .toolsContainer {
    display: flex;
-   /* background-color: coral; */
    gap: 15px;
 }
 
@@ -181,12 +147,9 @@ canvas {
    cursor: pointer;
    align-items: center;
    display: flex;
-   /* flex: 1; */
-   /* height: 50px;
-   width: 50px; */
    padding: 15px;
-   /* height: 80px; */
 }
+   
 
 .toolItem:hover {
    background-color: #1DB954;
@@ -196,8 +159,7 @@ canvas {
    background-color: #1DB954;
 }
 
-.fa-paint-roller {
-}
+
 
 .toolItem i {
    color: rgb(241, 241, 241);
@@ -206,18 +168,11 @@ canvas {
 
 
 form {
-   /* background-color: lightblue; */
    display: flex;
    flex-direction: column;
-   /* justify-content: space-between; */
    gap: 32px;
-   /* width: 310px; */
-   /* width: 85%; */
 }
 
-.labelInputWrap {
-   /* background-color: coral; */
-}
 
 input[type=color] {
    -webkit-appearance: none;
@@ -270,10 +225,9 @@ select {
    font-weight: 500;
    height: 50px;
    padding: 0 10px;
-
-
-   /* -webkit-appearance: none; */
 }
+
+
 
 
 select > * {
@@ -288,11 +242,9 @@ select > * {
 }
 
 .labelInputWrap {
-   /* background-color: salmon; */
    color: white;
    display: flex;
    flex-direction: column;
-   /* align-items: center; */
    gap: 10px;
    position: relative;
 }
@@ -322,7 +274,6 @@ label {
    appearance: none;
    background-color: #383838;
    border-radius: 50%;
-   /* margin-bottom: 2px; */
    height: 22px;
    width: 22px;
 }
